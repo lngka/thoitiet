@@ -1,0 +1,23 @@
+body {
+  position: relative;
+  padding-top: 5rem;
+  z-index: 5;
+}
+
+/*.bg {
+  content: "";
+  margin-top: -5rem;
+  background-color: blue;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100px;
+  z-index: -1;
+}*/
+
+html {
+        background: url('images/yourimage.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
