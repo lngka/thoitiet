@@ -2,6 +2,9 @@
 var userIP;
 var lat;
 var long;
+var skycons = new Skycons({"color": "black"});
+skycons.set("icon", Skycons.RAIN);
+skycons.play();
 
 $(document).ready(function(){
 
@@ -32,6 +35,9 @@ function parseIP(data) {
 }
 
 function parseWeather(data) {
+  // update temperature
   $("#temperature").html(data.currently.temperature);
-  console.log(data);
+
+  // get icon
+  icon = data.currently.icon;
 }
