@@ -1,10 +1,12 @@
 //addfe35e11125032026cd9c162143a15
-var userIP;
-var lat;
-var long;
+var userIP, lat, long, isCelsius;
 var skycons = new Skycons({"color": "black"});
-skycons.set("icon", Skycons.RAIN);
-skycons.play();
+
+var list  = [
+      "clear-day", "clear-night", "partly-cloudy-day",
+      "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+      "fog"
+    ];
 
 $(document).ready(function(){
 
@@ -40,4 +42,8 @@ function parseWeather(data) {
 
   // get icon
   icon = data.currently.icon;
+
+  //set icon
+  skycons.set("icon", icon);
+  skycons.play();
 }
