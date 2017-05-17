@@ -2,6 +2,16 @@
 var userIP, lat, long, fTemp;
 var isCelsius = false;
 var skycons = new Skycons({"color": "black"});
+var d = new Date();
+var weekDays = {
+  0: "Sunday",
+  1: "Monday",
+  2: "Tuesday",
+  3: "Wednesday",
+  4: "Thursday",
+  5: "Friday",
+  6: "Saturday"
+}
 
 // var list  = [
 //       "clear-day", "clear-night", "partly-cloudy-day",
@@ -34,6 +44,12 @@ $(document).ready(function(){
       isCelsius = !isCelsius;
     }
   })
+
+  // deal with dates
+  $("#today").text(weekDays[d.getDay()]);
+  $("#tomorrow1").text(weekDays[(d.getDay() +1) % 6 - 1]);
+  $("#tomorrow2").text(weekDays[(d.getDay() +2) % 6 - 1]);
+  $("#tomorrow3").text(weekDays[(d.getDay() +3) % 6 - 1]);
 })
 
 /*
@@ -65,14 +81,12 @@ function parseWeather(data) {
   // remembers fTemp for converstion to cTemp
   fTemp = data.currently.temperature;
   $("#temperature").html(fTemp);
-  $("#convert").html("&#8457"); // if user changed #convert to "C" before reponse from DarkSky, make sure proper label
-
-  // get icon
-  icon = data.currently.icon;
+  $("#convert").html("&#8457"); // make sure proper label
 
   //set icon
-  skycons.set("icon", icon);
-  skycons.play();
+  var iconToday = data.currently.icon;
+  skycons.set("iconToday", iconToday);
 
-  console.log(data);
+  skycons.play();
+  console.log(d.getDay());
 }

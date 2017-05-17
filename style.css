@@ -6,21 +6,7 @@ body {
   z-index: 5;
 }
 
-/*.bg {
-  background: url('bg.jpg') no-repeat center center fixed;
-  content: "";
-  margin-top: -5rem;
-  background-color: blue;
-  position: absolute;
-  min-width: 100%;
-  min-height: 1000px;
-  z-index: -1;
-}*/
-
-/*html {
-        background: url('bg.jpg') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-}*/
+#today {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}

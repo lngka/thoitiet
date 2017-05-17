@@ -14,16 +14,16 @@
   <body>
     <div class="bg"></div>
     <div class="container-fluid text-center">
-      <!-- <div class="row">
+      <div class="row">
         <div class="col"></div>
-        <div class="col">TODAY</div>
+        <div class="col display-4" id ="today">Today</div>
         <div class="col"></div>
-      </div> -->
+      </div>
       <!-- weather icon -->
       <div class="row">
         <div class="col"></div>
         <div class="col-12 col-sm-10 col-md-10 col-lg-6 col-xl-6 text-center">
-          <canvas id="icon" width="128" height="128"></canvas>
+          <canvas id="iconToday" width="128" height="128"></canvas>
         </div>
         <div class="col"></div>
       </div>
@@ -44,7 +44,22 @@
         </div>
         <div class="col"></div>
       </div>
-
+      <!-- forecast row -->
+      <hr>
+      <div class="row">
+        <div class="col">
+          <p id="tomorrow1">Tomorrow</p>
+          <canvas id="iconTomorrow" width="64" height="64"></canvas>
+        </div>
+        <div class="col">
+          <p id="tomorrow2">After tomorrow</p>
+          <canvas id="iconTomorrow1" width="64" height="64"></canvas>
+        </div>
+        <div class="col">
+          <p  id="tomorrow3">After after tomorrow</p>
+          <canvas id="iconTomorrow2" width="64" height="64"></canvas>
+        </div>
+      </div>
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
