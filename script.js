@@ -37,7 +37,7 @@ $(document).ready(function(){
       $("#convert").html("&#8457");
       isCelsius = !isCelsius;
 
-    } else if(!isCelsius) { // if Farenheit and cTemp uncalculated
+    } else if(!isCelsius) {
       var cTemp = ((fTemp - 32) * 5/9).toFixed(2);
       $("#temperature").html(cTemp);
       $("#convert").html("&#8451");
@@ -47,9 +47,9 @@ $(document).ready(function(){
 
   // deal with dates
   $("#today").text(weekDays[d.getDay()]);
-  $("#tomorrow1").text(weekDays[(d.getDay() +1) % 6 - 1]);
-  $("#tomorrow2").text(weekDays[(d.getDay() +2) % 6 - 1]);
-  $("#tomorrow3").text(weekDays[(d.getDay() +3) % 6 - 1]);
+  $("#tomorrow1").text(weekDays[(d.getDay() +1) % 6]);
+  $("#tomorrow2").text(weekDays[(d.getDay() +2) % 6]);
+  $("#tomorrow3").text(weekDays[(d.getDay() +3) % 6]);
 })
 
 /*
@@ -88,5 +88,5 @@ function parseWeather(data) {
   skycons.set("iconToday", iconToday);
 
   skycons.play();
-  console.log(d.getDay());
+  console.log("test");
 }
