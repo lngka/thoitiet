@@ -14,21 +14,16 @@
   <body>
     <div class="bg"></div>
     <div class="container-fluid text-center">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col"></div>
-        <div class="col">TIME</div>
+        <div class="col">TODAY</div>
         <div class="col"></div>
-      </div>
-      <!-- location row -->
+      </div> -->
+      <!-- weather icon -->
       <div class="row">
         <div class="col"></div>
         <div class="col-12 col-sm-10 col-md-10 col-lg-6 col-xl-6 text-center">
-          <table >
-            <tr>
-              <td>Location:</td>
-              <td id="location">dummy</td>
-            </tr>
-          </table>
+          <canvas id="icon" width="128" height="128"></canvas>
         </div>
         <div class="col"></div>
       </div>
@@ -36,26 +31,22 @@
       <div class="row">
         <div class="col"></div>
         <div class="col-12 col-sm-10 col-md-10 col-lg-6 col-xl-6">
-          <table>
-            <tr>
-              <td>Temperature:</td>
-              <td id="temperature">dummy</td>
-              <td><button class="btn-danger" type="button" name="convert">F</button></td>
-            </tr>
-          </table>
+              <span id="temperature">dummyTemperature</span>
+              <span><button class="btn-danger" id="convert">&#8457</button></span>
         </div>
         <div class="col"></div>
       </div>
-    </div>
-    <!-- weather icon -->
-    <div class="row">
-      <div class="col"></div>
-      <div class="col-12 col-sm-10 col-md-10 col-lg-6 col-xl-6 text-center">
-        <canvas id="icon" width="128" height="128"></canvas>
+      <!-- location row -->
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-12 col-sm-10 col-md-10 col-lg-6 col-xl-6 text-center">
+              <span id="location">dummyLocation</span>
+        </div>
+        <div class="col"></div>
       </div>
-      <div class="col"></div>
+
     </div>
-  </div>
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
