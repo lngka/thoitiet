@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="bg"></div>
-    <div class="container-fluid text-center">
+    <div class="container-fluid">
       <div class="row">
         <div class="col"></div>
         <div class="col display-4" id ="today">Today</div>
@@ -30,7 +30,7 @@
       <!-- temperature row -->
       <div class="row">
         <div class="col"></div>
-        <div class="col-12 col-sm-10 col-md-10 col-lg-6 col-xl-6">
+        <div class="col-12 col-sm-10 col-md-10 col-lg-6 col-xl-6 text-center">
               <span id="temperature">dummyTemperature</span>
               <span><button class="btn-danger" id="convert">&#8457</button></span>
         </div>
@@ -71,7 +71,9 @@
         <div class="col-6 col-md-6 col-lg-6 col-xl-4">
           <span class="progress">
             <div id ="tomorrow1-left" class="progress-bar"></div>
+            <span id="tomorrow1Min"></span>
             <div id ="tomorrow1-bar"  class="progress-bar"></div>
+            <span id="tomorrow1Max"></span>
             <div id ="tomorrow1-right"class="progress-bar" ></div>
           </span>
         </div>
@@ -86,7 +88,9 @@
         <div class="col-6 col-md-6 col-lg-6 col-xl-4">
           <div class="progress">
             <div id ="tomorrow2-left" class="progress-bar"></div>
+            <span id="tomorrow2Min"></span>
             <div id ="tomorrow2-bar" class="progress-bar"></div>
+            <span id="tomorrow2Max"></span>
             <div id ="tomorrow2-right" class="progress-bar" ></div>
           </div>
         </div>
@@ -101,7 +105,9 @@
         <div class="col-6 col-md-6 col-lg-6 col-xl-4">
           <div class="progress">
             <div id ="tomorrow3-left" class="progress-bar"></div>
+            <span id="tomorrow3Min"></span>
             <div id ="tomorrow3-bar" class="progress-bar"></div>
+            <span id="tomorrow3Max"></span>
             <div id ="tomorrow3-right" class="progress-bar" ></div>
           </div>
         </div>
