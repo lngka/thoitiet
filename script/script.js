@@ -108,10 +108,4 @@ function converse(element) {
     temp = (temp * 9/5 +32).toFixed(0);
     $(element).html(temp);
   }
-
-  // trick to simulate fadeIn
-  // var original = $(element);
-  // var copy = original.clone(true);
-  // original.before(copy);
-  // original.remove();
 }
