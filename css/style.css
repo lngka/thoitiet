@@ -1,0 +1,46 @@
+body {
+  background: url('bg.jpg') no-repeat center center fixed;
+  position: relative;
+  padding-top: 8rem;
+  z-index: 5;
+}
+
+#today {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.progress{
+  background-color: rgba(255, 255, 255, 0) !important;
+  margin-top: 0.3rem;
+}
+
+#tomorrow1-left,
+#tomorrow1-right,
+#tomorrow2-left,
+#tomorrow2-right,
+#tomorrow3-left,
+#tomorrow3-right {
+  opacity: 0;
+  /*margin-left: 3rem;*/
+}
+
+#tomorrow1-bar,
+#tomorrow2-bar,
+#tomorrow3-bar {
+  background-color: #5D6D7E;
+  border-radius: 1rem;
+}
+
+/*vertical alignment for #iconTomorrow and #tomorrow*/
+.wrapper {
+  position: relative;
+  margin-right: 3rem;
+}
+#tomorrow3,
+#tomorrow2,
+#tomorrow1 {
+  position: absolute;
+  top: 0%;
+  left : 2rem;
+}
