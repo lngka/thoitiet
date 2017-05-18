@@ -1,4 +1,3 @@
-//addfe35e11125032026cd9c162143a15
 var userIP, lat, long, fTemp;
 var isCelsius = false;
 var skycons = new Skycons({"color": "black"});
@@ -12,12 +11,6 @@ var weekDays = {
   5: "Friday",
   6: "Saturday"
 }
-
-// var list  = [
-//       "clear-day", "clear-night", "partly-cloudy-day",
-//       "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
-//       "fog"
-//     ];
 
 $(document).ready(function(){
 
@@ -46,10 +39,11 @@ $(document).ready(function(){
   })
 
   // deal with dates
-  $("#today").text(weekDays[d.getDay()]);
-  $("#tomorrow1").text(weekDays[(d.getDay() +1) % 6]);
-  $("#tomorrow2").text(weekDays[(d.getDay() +2) % 6]);
-  $("#tomorrow3").text(weekDays[(d.getDay() +3) % 6]);
+  $("#today").text(weekDays[(d.getDay()) % 7]);
+    console.log(d.getDay());
+  $("#tomorrow1").text(weekDays[(d.getDay()+1) % 7]);
+  $("#tomorrow2").text(weekDays[(d.getDay()+2) % 7]);
+  $("#tomorrow3").text(weekDays[(d.getDay()+3) % 7]);
 })
 
 /*
@@ -88,5 +82,14 @@ function parseWeather(data) {
   skycons.set("iconToday", iconToday);
 
   skycons.play();
-  console.log("test");
+
 }
+
+/*
+*  possible weather status
+var list  = [
+      "clear-day", "clear-night", "partly-cloudy-day",
+      "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+      "fog"
+    ];
+*/
