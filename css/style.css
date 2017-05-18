@@ -5,6 +5,25 @@ body {
   z-index: 5;
 }
 
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.fadeIn {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
 #today {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -35,7 +54,7 @@ body {
 /*vertical alignment for #iconTomorrow and #tomorrow*/
 .wrapper {
   position: relative;
-  margin-right: 4rem;
+  margin-right: 5rem;
 }
 #tomorrow3,
 #tomorrow2,
@@ -48,4 +67,9 @@ body {
 hr {
   margin-top: 1rem;
   margin-bottom: 3rem;
+}
+
+span {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.2rem;
 }

@@ -31,11 +31,19 @@ $(document).ready(function(){
     converse("#tomorrow2Max");
     converse("#tomorrow3Min");
     converse("#tomorrow3Max");
+
     if (isCelsius)
       $("#convert").html("&#8457");
     if (!isCelsius)
       $("#convert").html("&#8451");
     isCelsius = !isCelsius;
+
+    // trick to simulate fadeIn
+    $(".fadeIn").each(function(){
+      // pure JS code because each selected object is NOT jquery object
+      var copy = this.cloneNode(true);
+      this.parentNode.replaceChild(copy, this);
+    })
   })
 
   // deal with dates
@@ -92,6 +100,7 @@ function parseWeather(data) {
 
 function converse(element) {
   var temp = Number($(element).text());
+
   if (!isCelsius) {
     temp = ((temp - 32) * 5/9).toFixed(0);
     $(element).html(temp);
@@ -99,4 +108,10 @@ function converse(element) {
     temp = (temp * 9/5 +32).toFixed(0);
     $(element).html(temp);
   }
+
+  // trick to simulate fadeIn
+  // var original = $(element);
+  // var copy = original.clone(true);
+  // original.before(copy);
+  // original.remove();
 }
