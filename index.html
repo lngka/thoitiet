@@ -7,7 +7,7 @@
      <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- custom  CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
@@ -46,29 +46,62 @@
       </div>
       <!-- forecast row -->
       <hr>
-      <div class="row">
-        <div class="col"></div>
+      <!-- <div class="row">
+        <div class="col-0 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
         <div class="col">
           <p id="tomorrow1">Tomorrow</p>
-          <canvas id="iconTomorrow" width="64" height="64"></canvas>
-        </div>
-        <div class="col">
-          <p id="tomorrow2">After tomorrow</p>
           <canvas id="iconTomorrow1" width="64" height="64"></canvas>
         </div>
         <div class="col">
-          <p  id="tomorrow3">After after tomorrow</p>
+          <p id="tomorrow2">After tomorrow</p>
           <canvas id="iconTomorrow2" width="64" height="64"></canvas>
         </div>
-        <div class="col"></div>
+        <div class="col">
+          <p  id="tomorrow3">After after tomorrow</p>
+          <canvas id="iconTomorrow3" width="64" height="64"></canvas>
+        </div>
+        <div class="col-0 col-sm-1 col-md-1 col-lg-3 col-xl-3"></div>
+      </div> -->
+      <div class="row">
+        <span><canvas id="iconTomorrow1" width="32" height="32"></canvas></span>
+        <span id="tomorrow1"></span>
+        <div class="col">
+          <div class="progress">
+            <div id ="tomorrow1-left" style="width: 15%" class="progress-bar"></div>
+            <div id ="tomorrow1-bar" style="width: 15%" class="progress-bar"></div>
+            <div id ="tomorrow1-right"style="width: 15%" class="progress-bar" ></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <span><canvas id="iconTomorrow2" width="32" height="32"></canvas></span>
+        <span id="tomorrow2"></span>
+        <div class="col">
+          <div class="progress">
+            <div id ="tomorrow2-left" style="width: 15%" class="progress-bar"></div>
+            <div id ="tomorrow2-bar" style="width: 15%" class="progress-bar"></div>
+            <div id ="tomorrow2-right"style="width: 15%" class="progress-bar" ></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <span><canvas id="iconTomorrow3" width="32" height="32"></canvas></span>
+        <span id="tomorrow3"></span>
+        <div class="col">
+          <div class="progress">
+            <div id ="tomorrow3-left" style="width: 15%" class="progress-bar"></div>
+            <div id ="tomorrow3-bar" style="width: 15%" class="progress-bar"></div>
+            <div id ="tomorrow3-right"style="width: 15%" class="progress-bar" ></div>
+          </div>
+        </div>
       </div>
     </div>
-
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="skycons.js"></script>
-    <script src="script.js"></script>
+    <script src="script/tempRange.js"></script>
+    <script src="script/skycons.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>
