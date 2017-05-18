@@ -1,4 +1,4 @@
-var userIP, lat, long, fTemp;
+var userIP, lat, long;
 var isCelsius = false;
 var skycons = new Skycons({"color": "black"});
 var d = new Date();
@@ -24,18 +24,18 @@ $(document).ready(function(){
 
   // convert C <-> F
   $("#convert").on("click", function(){
-
-    if (isCelsius) {
-      $("#temperature").html(fTemp);
+    converse("#temperature");
+    converse("#tomorrow1Min");
+    converse("#tomorrow1Max");
+    converse("#tomorrow2Min");
+    converse("#tomorrow2Max");
+    converse("#tomorrow3Min");
+    converse("#tomorrow3Max");
+    if (isCelsius)
       $("#convert").html("&#8457");
-      isCelsius = !isCelsius;
-
-    } else if(!isCelsius) {
-      var cTemp = ((fTemp - 32) * 5/9).toFixed(2);
-      $("#temperature").html(cTemp);
+    if (!isCelsius)
       $("#convert").html("&#8451");
-      isCelsius = !isCelsius;
-    }
+    isCelsius = !isCelsius;
   })
 
   // deal with dates
@@ -72,8 +72,7 @@ function parseWeather(data) {
 
   // update temperature
   // remembers fTemp for converstion to cTemp
-  fTemp = data.currently.temperature;
-  $("#temperature").html(fTemp);
+  $("#temperature").html(data.currently.temperature.toFixed(0));
   $("#convert").html("&#8457"); // make sure proper label
 
   //set icons
@@ -89,4 +88,15 @@ function parseWeather(data) {
 
   // draw tempRange
   tempRange(data);
+}
+
+function converse(element) {
+  var temp = Number($(element).text());
+  if (!isCelsius) {
+    temp = ((temp - 32) * 5/9).toFixed(0);
+    $(element).html(temp);
+  } else {
+    temp = (temp * 9/5 +32).toFixed(0);
+    $(element).html(temp);
+  }
 }

@@ -40,19 +40,19 @@ function tempRange(data) {
   $("#tomorrow1-left").css("width", tomorrow1Left + "%");
   $("#tomorrow1-bar").css("width", tomorrow1Bar + "%");
   $("#tomorrow1-right").css("width", tomorrow1Right + "%");
-  $("#tomorrow1Min").text(tomorrow1Min);
-  $("#tomorrow1Max").text(tomorrow1Max);
+  $("#tomorrow1Min").text(tomorrow1Min.toFixed(0));
+  $("#tomorrow1Max").text(tomorrow1Max.toFixed(0));
 
 
   $("#tomorrow2-left").css("width", tomorrow2Left + "%");
   $("#tomorrow2-bar").css("width", tomorrow2Bar + "%");
   $("#tomorrow2-right").css("width", tomorrow2Right + "%");
-  $("#tomorrow2Min").text(tomorrow2Min);
-  $("#tomorrow2Max").text(tomorrow2Max);
+  $("#tomorrow2Min").text(tomorrow2Min.toFixed(0));
+  $("#tomorrow2Max").text(tomorrow2Max.toFixed(0));
 
   $("#tomorrow3-left").css("width", tomorrow3Left + "%");
   $("#tomorrow3-bar").css("width", tomorrow3Bar + "%");
   $("#tomorrow3-right").css("width", tomorrow3Right + "%");
-  $("#tomorrow3Min").text(tomorrow3Min);
-  $("#tomorrow3Max").text(tomorrow3Max);
+  $("#tomorrow3Min").text(tomorrow3Min.toFixed(0));
+  $("#tomorrow3Max").text(tomorrow3Max.toFixed(0));
 }
