@@ -1,7 +1,7 @@
 body {
   background: url('bg-min.jpg') no-repeat center center fixed;
   position: relative;
-  padding-top: 8rem;
+  padding-top: 4rem;
   z-index: 5;
 }
 
